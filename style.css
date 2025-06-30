@@ -1,18 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Exile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Luckiest+Guy&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     font-weight: 400;
 }
 
 :root {
-    --azul: #2d3142ff;
-    --azul-claro: #4f5d75ff;
-    --prata: #bfc0c0ff;
-    --branco: #ffffffff;
-    --laranja: #ef8354ff;
-    --preto: #000000;
-    --fonte-primaria: "Exile", system-ui;
-    --fonte-secundaria: "DM Sans", sans-serif;
+    --Azul-Real-tradicional: #780000;
+    --Azul-persa: #c1121f;
+    --Azul-verde: #fdf0d5;
+    --AeroWillis: #003049;
+    --Branco: #669bbc;
+    --Preto: #606c38;
+
+    --fonte-titulo: "Luckiest Guy", cursive;
+    --fonte-texto:  "Carter One", system-ui;
+
+}
+
+body{
+    background-color: var(--Azul-persa);
+    color: var(--Branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: var(--fonte-texto);
+}
+
+.caixa-principal{
+    background-color: var(--AeroWillis) ;
+    width: 90%;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo{
+    font-family: var(--fonte-titulo);
 }
