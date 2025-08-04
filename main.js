@@ -54,7 +54,7 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Voçe pagou sua fiança.",
-                afirmacao: "Voçe é deportado e liberto no Brasil novamente."
+                afirmacao: "Voçe é deportado e libertado no Brasil novamente."
             },
 
             {
