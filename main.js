@@ -59,7 +59,7 @@ const perguntas = [
 
             {
                 texto: "Voçe voltou ao Brasil",
-                afirmacao: "Voçe conseguiu passar pela segurança e concluiu a missão, agora voçe tem 10 mil reais e agora terá que limpa-lo."
+                afirmacao: "Voçe conseguiu passar pela segurança e concluiu a missão, agora voçe tem 10 mil reais."
             }
         ]
     }
