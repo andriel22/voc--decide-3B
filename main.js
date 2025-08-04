@@ -14,7 +14,7 @@ const perguntas = [
             },
 
             {
-                texto: "Voçe aproveita que está ali e vai fazer algumas coompras.",
+                texto: "Voçe aproveita que está ali e vai fazer algumas compras.",
                 afirmacao: "Voçe perde o vôo."
             }
         ]
@@ -69,29 +69,39 @@ let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
-function mostraPergunta() {
+function mostraPergunta(){
+    if(atual >= perguntas.length){
+        mostreResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual]
     caixaPerguntas.textContent = perguntaAtual.enunciado
-    mostraAlternativas()
+    caixaAlternativas.textContent= ""
+    mostraAlternativas();
 }
 
-function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativa = document.createElement("button")
+function mostraAlternativas(){
+    for( const alternativa of perguntaAtual.alternativas ){
+        const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa))
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
 
 function respostaSelecionada(opcaoSelecionada){
+    const afirmacao = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacao + " "
     atual++
     mostraPergunta();
 }
 
+function mostreResultado(){
+    caixaPerguntas.textContent = " Tudo começou... ";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
 
 mostraPergunta();
 
 console.log(perguntas)
-
-

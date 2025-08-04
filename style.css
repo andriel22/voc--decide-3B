@@ -7,12 +7,13 @@
 }
 
 :root {
-    --Azul-Real-tradicional: #780000;
-    --Azul-persa: #c1121f;
-    --Azul-verde: #fdf0d5;
-    --AeroWillis: #003049;
-    --Branco: #669bbc;
-    --Preto: #606c38;
+    --vermelho-carmesin: #780000;
+    --vermelho-forte: #c1121f;
+    --branco: #ffffff;
+    --azul-forte: #003049;
+    --azul-claro: #669bbc;
+    --verde: #a1c719;
+    --azul-bebê: rgb(0, 161, 236);
 
     --fonte-titulo: "Luckiest Guy", cursive;
     --fonte-texto:  "Carter One", system-ui;
@@ -20,7 +21,7 @@
 }
 
 body{
-    background-color: var(--Azul-persa);
+    background-color: var(--azul-claro);
     color: var(--Branco);
     display: flex;
     align-items: center;
@@ -30,7 +31,7 @@ body{
 }
 
 .caixa-principal{
-    background-color: var(--AeroWillis) ;
+    background-color: var(--branco) ;
     width: 90%;
     text-align: center;
     padding: 20px;
@@ -38,4 +39,18 @@ body{
 
 .titulo{
     font-family: var(--fonte-titulo);
+}
+
+button{
+    background-color: rgb(0, 161, 236);
+    color: black;
+    border: solid 2px var(--vermelho-carmesin) ;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px auto;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: var(--verde);
 }
